@@ -3,17 +3,18 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Poppins', sans-serif; /* Uma fonte mais moderna */
+    font-family: 'Poppins', sans-serif;
 }
 
 body {
-    background-color: #121212; /* Fundo Dark */
+    background-color: #121212;
     color: #ffffff;
     line-height: 1.6;
+    overflow-x: hidden; /* Garante que nada force a tela para os lados */
 }
 
 header {
-    background: linear-gradient(135deg, #6e8efb, #a777e3); /* Degradê top */
+    background: linear-gradient(135deg, #6e8efb, #a777e3);
     padding: 50px 20px;
     text-align: center;
     box-shadow: 0 4px 15px rgba(0,0,0,0.3);
@@ -27,14 +28,13 @@ header {
 
 .cartao {
     background: #1e1e1e;
-    border-left: 5px solid #6e8efb; /* Detalhe azul na lateral */
+    border-left: 5px solid #6e8efb;
     padding: 25px;
     margin-bottom: 25px;
     border-radius: 12px;
-    transition: transform 0.3s; /* Efeito de movimento */
+    transition: transform 0.3s;
 }
 
-/* Efeito quando passa o mouse no card */
 .cartao:hover {
     transform: translateY(-5px);
     background: #252525;
@@ -54,12 +54,13 @@ footer {
     font-size: 0.9rem;
 }
 
-/* --- SEÇÃO NETFLIX (MAQUIAGEM NOVA) --- */
+/* --- SEÇÃO NETFLIX (BOTÃO ESTILO APP) --- */
 
 .container-netflix {
     text-align: center;
-    margin: 40px 0;
-    padding: 10px;
+    margin: 40px auto;
+    padding: 0 20px;
+    width: 100%;
 }
 
 .netflix-card {
@@ -67,15 +68,18 @@ footer {
     flex-direction: column;
     align-items: center;
     background-color: #000;
-    padding: 25px;
+    padding: 20px;
     border-radius: 15px;
     text-decoration: none;
     border: 2px solid transparent;
     transition: 0.4s;
     box-shadow: 0 4px 20px rgba(229, 9, 20, 0.2);
+    
+    /* Tamanho de aplicativo */
+    max-width: 220px; 
+    width: 100%;
 }
 
-/* Efeito de brilho vermelho quando passa o mouse ou toca */
 .netflix-card:hover {
     border-color: #e50914; 
     transform: scale(1.05);
@@ -83,15 +87,19 @@ footer {
     background-color: #080808;
 }
 
+/* Ajuste do Logo para não vazar */
 .logo-btn {
-    width: 130px;
+    width: 100%;
+    max-width: 150px; /* Tamanho controlado */
+    height: auto;
     margin-bottom: 15px;
 }
 
 .netflix-card span {
-    color: white;
+    color: white !important;
     font-weight: bold;
     letter-spacing: 1px;
-    font-size: 0.9rem;
+    font-size: 0.85rem;
     text-transform: uppercase;
+    text-decoration: none !important;
 }
