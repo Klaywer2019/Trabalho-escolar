@@ -3,107 +3,119 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Minha Apresentação</title>
+    <title>Temporada 1: Programação</title>
     <style>
-        /* Estilização Geral */
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Segoe UI', sans-serif;
         }
 
         body {
-            background-color: #121212; /* Fundo Escuro */
+            background-color: #121212;
             color: #ffffff;
             display: flex;
-            justify-content: center;
+            flex-direction: column;
             align-items: center;
-            height: 100vh;
-            overflow: hidden;
+            padding: 20px;
+            min-height: 100vh;
         }
 
-        /* Card de Apresentação */
-        .card {
-            background: #1e1e1e;
-            padding: 2.5rem;
-            border-radius: 20px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+        .header-temp {
             text-align: center;
-            max-width: 400px;
-            width: 90%;
-            border: 1px solid #333;
-            transition: transform 0.3s ease;
+            margin-bottom: 30px;
         }
 
-        .card:hover {
-            transform: translateY(-10px);
+        .header-temp h1 {
+            color: #00adb5;
+            font-size: 2rem;
         }
 
-        /* Foto de Perfil (Opcional) */
-        .profile-img {
-            width: 120px;
-            height: 120px;
-            border-radius: 50%;
-            background: #333;
-            margin: 0 auto 1.5rem;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-size: 3rem;
-            border: 3px solid #00adb5;
-        }
-
-        h1 {
-            font-size: 1.8rem;
-            margin-bottom: 0.5rem;
-            color: #00adb5; /* Cor de destaque */
-        }
-
-        p {
-            font-size: 1rem;
-            color: #b3b3b3;
-            line-height: 1.6;
-            margin-bottom: 1.5rem;
-        }
-
-        /* Botões de Link/Redes */
-        .links {
+        /* Lista de Episódios/Matérias */
+        .lista-episodios {
+            width: 100%;
+            max-width: 600px;
             display: flex;
             flex-direction: column;
-            gap: 10px;
+            gap: 15px;
         }
 
-        .btn {
-            text-decoration: none;
-            background: #333;
-            color: white;
-            padding: 10px;
-            border-radius: 8px;
+        .item-aula {
+            background: #1e1e1e;
+            padding: 15px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            border-left: 5px solid #00adb5;
+            transition: 0.3s;
+        }
+
+        .item-aula:hover {
+            background: #252525;
+            transform: translateX(10px);
+        }
+
+        .numero {
             font-weight: bold;
-            transition: background 0.3s;
+            color: #00adb5;
+            font-size: 1.2rem;
         }
 
-        .btn:hover {
+        /* Botão para Voltar */
+        .btn-voltar {
+            margin-top: 40px;
+            text-decoration: none;
+            color: #121212;
             background: #00adb5;
+            padding: 10px 25px;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .btn-voltar:hover {
+            background: #ffffff;
+            transform: scale(1.1);
         }
     </style>
 </head>
 <body>
 
-    <div class="card">
-        <!-- Substitua o emoji por uma tag <img> se quiser usar uma foto -->
-        <div class="profile-img">👤</div>
-        
-        <h1>Seu Nome Aqui</h1>
-        <p>Estudante, Programador e Entusiasta de Tecnologia. Atualmente focado em criar projetos incríveis e aprender coisas novas.</p>
+    <div class="header-temp">
+        <h1>Temporada 1: Programação 💻</h1>
+        <p>Conteúdos que aprendi nesta jornada</p>
+    </div>
 
-        <div class="links">
-            <a href="#" class="btn">Meu Portfólio</a>
-            <a href="#" class="btn">GitHub</a>
-            <a href="#" class="btn">Contato</a>
+    <div class="lista-episodios">
+        <div class="item-aula">
+            <span class="numero">01</span>
+            <div>
+                <strong>Introdução ao HTML</strong>
+                <p style="font-size: 0.8rem; color: #bbb;">Criando a estrutura básica do site.</p>
+            </div>
+        </div>
+
+        <div class="item-aula">
+            <span class="numero">02</span>
+            <div>
+                <strong>Estilização com CSS</strong>
+                <p style="font-size: 0.8rem; color: #bbb;">Cores, fontes e layouts modernos.</p>
+            </div>
+        </div>
+
+        <div class="item-aula">
+            <span class="numero">03</span>
+            <div>
+                <strong>Publicação no GitHub</strong>
+                <p style="font-size: 0.8rem; color: #bbb;">Colocando o site no ar para o mundo.</p>
+            </div>
         </div>
     </div>
+
+    <!-- Esse é o botão de voltar clicável -->
+    <a href="index.html" class="btn-voltar">⬅ VOLTAR AO INÍCIO</a>
 
 </body>
 </html>
