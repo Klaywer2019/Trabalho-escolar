@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minha Apresentação</title>
+    <style>
+        /* Estilização Geral */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #121212; /* Fundo Escuro */
+            color: #ffffff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        /* Card de Apresentação */
+        .card {
+            background: #1e1e1e;
+            padding: 2.5rem;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            text-align: center;
+            max-width: 400px;
+            width: 90%;
+            border: 1px solid #333;
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+        }
+
+        /* Foto de Perfil (Opcional) */
+        .profile-img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            background: #333;
+            margin: 0 auto 1.5rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 3rem;
+            border: 3px solid #00adb5;
+        }
+
+        h1 {
+            font-size: 1.8rem;
+            margin-bottom: 0.5rem;
+            color: #00adb5; /* Cor de destaque */
+        }
+
+        p {
+            font-size: 1rem;
+            color: #b3b3b3;
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+        }
+
+        /* Botões de Link/Redes */
+        .links {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .btn {
+            text-decoration: none;
+            background: #333;
+            color: white;
+            padding: 10px;
+            border-radius: 8px;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+
+        .btn:hover {
+            background: #00adb5;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="card">
+        <!-- Substitua o emoji por uma tag <img> se quiser usar uma foto -->
+        <div class="profile-img">👤</div>
+        
+        <h1>Seu Nome Aqui</h1>
+        <p>Estudante, Programador e Entusiasta de Tecnologia. Atualmente focado em criar projetos incríveis e aprender coisas novas.</p>
+
+        <div class="links">
+            <a href="#" class="btn">Meu Portfólio</a>
+            <a href="#" class="btn">GitHub</a>
+            <a href="#" class="btn">Contato</a>
+        </div>
+    </div>
+
+</body>
+</html>
